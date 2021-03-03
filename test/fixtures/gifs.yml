@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  image_data: MyText
+  email: example@email.com
+  first_name: User
+  last_name: One
 
 two:
-  user: two
-  image_data: MyText
+  email: example2@email.com
+  first_name: User
+  last_name: Two

@@ -1,0 +1,27 @@
+<div class="flex bg-white border-b border-gray-200 z-100 h-16 items-center">
+  <div class="w-full max-w-screen-xl relative mx-auto px-6">
+    <div class="flex items-center -mx-6">
+      <div class="flex items-center px-6">
+        <%= link_to "AnimatedGif.me", root_path, class: "block lg:mr-4 text-black font-bold" %>
+      </div>
+
+      <div class="flex-grow">
+        <%= text_field_tag nil, nil, autofocus: true, placeholder: "Search gifs (Press / to focus)", class: "form-control", data: { controller: "search", action: "keypress@window->search#focus", target: "search.field" } %>
+      </div>
+
+      <div class="px-6">
+        <%= link_to 'New Gif', new_gif_path, class: "nav-link btn btn-purple" %> |
+
+        <% if user_signed_in? %>
+          <%= link_to "My Gifs", gifs_path, class: "nav-link" %> |
+          <%= link_to "Account", edit_user_registration_path, class: "nav-link" %> |
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %> |
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

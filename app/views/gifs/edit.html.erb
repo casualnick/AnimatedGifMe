@@ -1,0 +1,7 @@
+<h1>Editing Gif</h1>
+
+<%= render 'form', gif: @gif %>
+
+<%= link_to 'Destroy', @gif, method: :delete, data: { confirm: 'Are you sure?' } %> | 
+<%= link_to 'Show', @gif %> |
+<%= link_to 'Back', gifs_path %>
